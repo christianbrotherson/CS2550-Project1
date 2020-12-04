@@ -11,7 +11,7 @@ body {
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(1, 1, 1, 0), 10%, rgb(1, 1, 1)), url("/CS2550-Project1/img/hero-img.jpg");
+    background-image: linear-gradient(rgba(1, 1, 1, 0), 10%, rgb(1, 1, 1)), url("../img/hero-img.jpg");
     height: 100%;
 
     background-position: center;
