@@ -3,6 +3,7 @@ body, html {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
+
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/CS2550-Project1/img/hero-img.jpg");
     height: 100%;
@@ -22,46 +23,101 @@ body, html {
     color: white;
 }
 
-h1, h2 {
-    font-family: 'Roboto', sans-serif;
-}
-
 #profile {
     border-radius: 50%;
 }
 
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
 #classSchedule {
     text-align: center;
     margin-bottom: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 table {
-    width: 100%;
-    padding: 5px;
-    border: 2px solid #f7f7f7;
+    width: 70%;
+    padding: 15px;
     border-radius: 20px;
+    border-collapse: separate !important;
+    border-spacing: 5px;
     background-color: #f7f7f7;
+    table-layout: fixed;
+    margin-bottom: 30px;
+}
+
+tr {
+    margin: 10px;
+}
+
+th, td {
+    width: 150px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 td {
     text-align: center;
     padding: 5px;
-    border-bottom: 1px solid #e09d9d;
 }
 
 th {
     height: 50px;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
 }
 
-tr {
-    border: 6px solid 
+.no-th-border {
+    border-color: #f7f7f7;
 }
 
-.border {
-    border-top: 1px solid #e09d9d;
+.party {
+    background-color: green;
+    border-bottom-right-radius: 20px;
 }
 
+.physics {
+    background-color: #65b0b5;
+}
 
+.run {
+    background-color: red;
+}
+
+.study {
+    background-color: #e09d9d;
+}
+
+.time-cell {
+    border-bottom: 3px solid white;
+}
+
+.cs2300 {
+    background-color: #5480c7;
+}
+
+.cs2370 {
+    background-color: #d1de71;
+}
+
+.cs2420 {
+    background-color: #eb3b46;   
+}
+
+.cs2550 {
+    background-color: #eb843b;
+}
+
+.cs2810 {
+    background-color: #5ead87;
+}
 
 #copyright {
     background-color: rgba(52, 58, 64, 1)!important;
