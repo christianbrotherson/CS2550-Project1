@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,10 +6,12 @@
     <link rel="icon" type="image/png" href="img/favicon-32x32.png"/>
 
     <link rel="stylesheet" href="styles/styles.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="js/modal.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
 </head>
 <body>
     <div class="hero-image">
@@ -17,121 +19,139 @@
             <h1>I am Christian Brotherson</h1>
             <p>And I'm a Software Developer</p>
             <p>Please give me a good grade :)</p>
-            <img id="profile" src="/CS2550-Project1/profilePic.png" alt="">
         </div>
     </div>
+    
+    <div class="container">
+        <div class="center-everything">
+            <div class="pic">
+                <img id="profile" src="/CS2550-Project1/profilePic.png" alt="Christian Brotherson">
+                <div id="myModal" class="modal">
+            
+                    <!-- The Close Button -->
+                    <span class="close">&times;</span>
+                    
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content" id="img01">
+                    
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+            </div>
 
-    <div id="books">
-        <h2>My Five Favorite Books</h2>
-        <ol id="favoriteBooks">
-            <li>The Way of Kings (the entire series really) - Brandon Sanderson</li>
-            <li>Harry Potter - J.K. Rowling</li>
-            <li>The Wheel of Time - Robert Jordan (Finished by Brandon Sanderson)</li>
-            <li>The Mistborn Trilogy - Brandon Sanderson</li>
-            <li>Red Rising - Pierce Brown</li>
-        </ol>
-    </div>
-
-    <div id="poem">
-        <h2>Blowouts</h2>
-        <p>
-            New born babies bring many new tasks<br>
-            Like cleaning blowouts all the time<br>
-            But what is worse than a blowout you ask<br>
-            A poem that doesn't rhyme
-        </p>
-
-        <p>This poem was inspired by a word document asking me to write a poem. But I am also having my first child in January so I could write about my near future.</p>
-    </div>
-
-    <div id="interests">
-        <h2>My Personal Interests</h2>
-        <p>I love to read. As you can tell from my favorite books, my favorite genre is fantasy. I love being transported to new worlds and experiencing the lives of people so different.</p>
-        <p>I love to be active and play sports. My favorite is basketball, but unfortunately covid has stopped that for a while. I recently picked up pickleball which is an absolute blast.</p>
-        <p>I love to spend time with my family. My wife and I travel with her Dad a lot. We recently went to New York City and Miami Florida.</p>
-    </div>
-
-    <div id="classSchedule">
-        <h2>Class Schedule</h2>
-        <table>
-            <tr id="borderBottom">
-                <th class="no-th-border"></th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-            </tr>
-            <tr>
-                <td class="time-cell">1:00 PM</td>
-                <td rowspan="2" colspan="5" class="physics">PHYS 2210</td>
-            </tr>
-            <tr>
-                <td class="time-cell">1:30 PM</td>
-            </tr>
-            <tr>
-                <td class="time-cell">2:00 PM</td>
-                <td class="study" rowspan="2">Study / Eat</td>
-                <td class="study">Study / Eat</td>
-                <td class="study" rowspan="2">Study / Eat</td>
-                <td class="study">Study / Eat</td>
-                <td class="study" rowspan="2">Study / Eat</td>
-            </tr>
-            <tr>
-                <td class="time-cell">2:30 PM</td>
-                <td class="cs2370" rowspan="2">CS 2370</td>
-                <td class="cs2370" rowspan="2">CS 2370</td>
-            </tr>
-            <tr>
-                <td class="time-cell">3:00 PM</td>
-                <td class="cs2810" rowspan="2">CS 2810</td>
-                <td class="cs2810" rowspan="2">CS 2810</td>
-                <td class="cs2810" rowspan="2">CS 2810</td>
-            </tr>
-            <tr>
-                <td class="time-cell">3:30 PM</td>
-                <td class="run">Run to class</td>
-                <td class="run">Run to class</td>
-            </tr>
-            <tr>
-                <td class="time-cell">4:00 PM</td>
-                <td class="study" rowspan="6">Study / Eat</td>
-                <td class="cs2300" rowspan="2">CS 2300</td>
-                <td class="study" rowspan="3">Study / Eat</td>
-                <td class="cs2300" rowspan="2">CS 2300</td>
-                <td class="physics" rowspan="4">PHYS 2215</td>
-            </tr>
-            <tr>
-                <td class="time-cell">4:30 PM</td>
-            </tr>
-            <tr>
-                <td class="time-cell">5:00 PM</td>
-                <td class="study" rowspan="7">Study / Eat</td>
-                <td class="study" rowspan="7">Study / Eat</td>
-            </tr>
-            <tr>
-                <td class="time-cell">5:30 PM</td>
-                <td class="cs2550" rowspan="3">CS 2550</td>
-            </tr>
-            <tr>
-                <td class="time-cell">6:00 PM</td>
-                <td class="party" rowspan="5">Party</td>
-            </tr>
-            <tr>
-                <td class="time-cell">6:30 PM</td>
-            </tr>
-            <tr>
-                <td class="time-cell">7:00 PM</td>
-                <td class="cs2420" rowspan="3">CS 2420</td>
-                <td class="cs2420" rowspan="3">CS 2420</td>
-            </tr>
-            <tr>
-                <td class="time-cell">7:30 PM</td>
-            </tr>
-            <tr>
-                <td class="time-cell">8:00 PM</td>
-            </tr>
-        </table>
+            <div id="books">
+                <h2>My Five Favorite Books</h2>
+                <ul id="favoriteBooks">
+                    <li>The Way of Kings (the entire series really) - Brandon Sanderson</li>
+                    <li>Harry Potter - J.K. Rowling</li>
+                    <li>The Wheel of Time - Robert Jordan (Finished by Brandon Sanderson)</li>
+                    <li>The Mistborn Trilogy - Brandon Sanderson</li>
+                    <li>Red Rising - Pierce Brown</li>
+                </ul>
+            </div>
+        
+            <div id="poem">
+                <h2>Blowouts</h2>
+                <p>
+                    <i>New born babies bring many new tasks<br>
+                    Like cleaning blowouts all the time<br>
+                    But what is worse than a blowout you ask<br>
+                    A poem that doesn't rhyme</i>
+                </p>
+        
+                <p>This poem was inspired by a word document asking me to write a poem. But I am also having my first child in January so I could write about my near future.</p>
+            </div>
+        
+            <div id="interests">
+                <h2>My Personal Interests</h2>
+                <p>I love to read. As you can tell from my favorite books, my favorite genre is fantasy. I love being transported to new worlds and experiencing the lives of people so different.</p>
+                <p>I love to be active and play sports. My favorite is basketball, but unfortunately covid has stopped that for a while. I recently picked up pickleball which is an absolute blast.</p>
+                <p>I love to spend time with my family. My wife and I travel with her Dad a lot. We recently went to New York City and Miami Florida.</p>
+            </div>
+        
+            <div id="classSchedule">
+                <h2>Class Schedule</h2>
+                <table>
+                    <tr id="borderBottom">
+                        <th class="no-th-border"></th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">1:00 PM</td>
+                        <td rowspan="2" colspan="5" class="physics">PHYS 2210</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">1:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">2:00 PM</td>
+                        <td class="study" rowspan="2">Study / Eat</td>
+                        <td class="study">Study / Eat</td>
+                        <td class="study" rowspan="2">Study / Eat</td>
+                        <td class="study">Study / Eat</td>
+                        <td class="study" rowspan="2">Study / Eat</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">2:30 PM</td>
+                        <td class="cs2370" rowspan="2">CS 2370</td>
+                        <td class="cs2370" rowspan="2">CS 2370</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">3:00 PM</td>
+                        <td class="cs2810" rowspan="2">CS 2810</td>
+                        <td class="cs2810" rowspan="2">CS 2810</td>
+                        <td class="cs2810" rowspan="2">CS 2810</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">3:30 PM</td>
+                        <td class="run">Run to class</td>
+                        <td class="run">Run to class</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">4:00 PM</td>
+                        <td class="study" rowspan="6">Study / Eat</td>
+                        <td class="cs2300" rowspan="2">CS 2300</td>
+                        <td class="study" rowspan="3">Study / Eat</td>
+                        <td class="cs2300" rowspan="2">CS 2300</td>
+                        <td class="physics" rowspan="4">PHYS 2215</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">4:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">5:00 PM</td>
+                        <td class="study" rowspan="7">Study / Eat</td>
+                        <td class="study" rowspan="7">Study / Eat</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">5:30 PM</td>
+                        <td class="cs2550" rowspan="3">CS 2550</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">6:00 PM</td>
+                        <td class="party" rowspan="5">Party</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">6:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">7:00 PM</td>
+                        <td class="cs2420" rowspan="3">CS 2420</td>
+                        <td class="cs2420" rowspan="3">CS 2420</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">7:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td class="no-th-border">8:00 PM</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
 
     <section id="copyright">
