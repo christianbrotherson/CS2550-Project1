@@ -2,3 +2,5 @@
 
 ## Styling Used
 * CSS3 Web Fonts
+* Artistic Protrait
+* Sticky Footer
